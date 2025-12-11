@@ -1,0 +1,27 @@
+metric_category,metric_name,value,unit,generated_at,data_source
+Volume,Total Transactions,20487.0,count,2025-12-11T19:57:42.754752,data/bi/
+Volume,Total Customers,1200.0,count,2025-12-11T19:57:42.754752,data/bi/
+Volume,Total Products,150.0,count,2025-12-11T19:57:42.754752,data/bi/
+Financial,Total Revenue,358479418.279,USD,2025-12-11T19:57:42.754752,data/bi/
+Financial,Total Gross Margin,93289473.84899999,USD,2025-12-11T19:57:42.754752,data/bi/
+Financial,Gross Margin %,26.02366247325083,percent,2025-12-11T19:57:42.754752,data/bi/
+Financial,Average Order Value,17497.897119099915,USD,2025-12-11T19:57:42.754752,data/bi/
+Growth,CAGR,-49.726010958723265,percent,2025-12-11T19:57:42.754752,data/bi/
+Growth,Revenue Growth Rate,106.35038550668642,percent,2025-12-11T19:57:42.754752,data/bi/
+Growth,Avg Monthly Revenue,9957761.61886111,USD,2025-12-11T19:57:42.754752,data/bi/
+Growth,Peak Monthly Revenue,16902556.351999998,USD,2025-12-11T19:57:42.754752,data/bi/
+Operations,SLA Compliance,80.1333893498582,percent,2025-12-11T19:57:42.754752,data/bi/
+Operations,Return Rate,5.466862724503729,percent,2025-12-11T19:57:42.754752,data/bi/
+Operations,Avg Delivery Days,4.011448377271295,days,2025-12-11T19:57:42.754752,data/bi/
+Marketing,Total Marketing Spend,7961500.1,USD,2025-12-11T19:57:42.754752,data/bi/
+Marketing,Total Conversions,3427.0,count,2025-12-11T19:57:42.754752,data/bi/
+Marketing,Average CAC,2323.168981616574,USD,2025-12-11T19:57:42.754752,data/bi/
+Marketing,ROAS,45.0266173178846,ratio,2025-12-11T19:57:42.754752,data/bi/
+Risk,Avg Monthly Return,7.485733275930027,percent,2025-12-11T19:57:42.754752,data/bi/
+Risk,Volatility,40.442304252690484,percent,2025-12-11T19:57:42.754752,data/bi/
+Risk,Sharpe Ratio,0.18509660649299,ratio,2025-12-11T19:57:42.754752,data/bi/
+Risk,Max Drawdown,0.0,percent,2025-12-11T19:57:42.754752,data/bi/
+Data Quality,KPIs Tracked,13.0,count,2025-12-11T19:57:42.754752,data/bi/
+Data Quality,Date Range,1095.0,days,2025-12-11T19:57:42.754752,data/bi/
+Data Quality,Data Completeness,100.0,percent,2025-12-11T19:57:42.754752,data/bi/
+Performance,Compression Ratio,5.124980111376293,ratio,2025-12-11T19:57:42.754752,data/bi/

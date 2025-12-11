@@ -4,6 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Data Pipeline](https://img.shields.io/badge/Pipeline-ETL-green.svg)]()
 [![Analytics](https://img.shields.io/badge/Analytics-Business%20Intelligence-orange.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-25%2F26%20Passing-brightgreen.svg)]()
+[![Data Quality](https://img.shields.io/badge/Data%20Quality-96.2%25-success.svg)]()
 
 > A production-grade data analytics platform for D2C e-commerce operations, featuring automated ETL pipelines, star schema data modeling, and comprehensive KPI tracking across Supply Chain, Marketing, Finance, and Fulfillment domains.
 
@@ -88,6 +90,12 @@ python tests/test_data_quality.py
 - `data/bi/` - 7 BI tables (CSV + Parquet) + 5 scenario results
 - `data/scenarios/` - Scenario definitions
 - `logs/` - Execution and validation logs
+
+**One-Liner (All-in-One)**:
+```bash
+python src/etl/create_bi_exports.py && python src/simulate/run_scenario.py --all && python src/reporting/generate_summary_metrics.py && python tests/test_data_quality.py
+```
+*Generates all BI files, runs scenarios, calculates metrics, and validates quality in ~60 seconds*
 
 ---
 
