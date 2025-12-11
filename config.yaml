@@ -1,0 +1,9 @@
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  logs: "logs"
+
+etl:
+  date_dim_start_year: 2022
+  date_dim_end_year: 2025
+  manifest_file: "processed_manifest.json"

@@ -1,0 +1,13 @@
+@echo off
+echo Starting Simple Orchestrator...
+
+:loop
+echo [%TIME%] Running ETL Job...
+python src/etl/main_etl.py --config config.yaml >> logs/scheduler.log 2>&1
+
+echo [%TIME%] Running Verification...
+python src/etl/verify_data.py >> logs/scheduler.log 2>&1
+
+echo [%TIME%] Job Complete. Waiting 24 hours...
+timeout /t 86400 /nobreak
+goto loop
