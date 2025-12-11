@@ -1,0 +1,22 @@
+{
+  "created_at": "2025-12-11T19:23:05.058319",
+  "tables": [
+    "dim_date",
+    "dim_customer",
+    "dim_product",
+    "fact_transactions",
+    "fact_delivery",
+    "fact_kpis_daily",
+    "fact_kpis_monthly"
+  ],
+  "format": "both",
+  "row_counts": {
+    "dim_date": 1461,
+    "dim_customer": 1200,
+    "dim_product": 50,
+    "fact_transactions": 20487,
+    "fact_delivery": 19042,
+    "fact_kpis_daily": 11697,
+    "fact_kpis_monthly": 288
+  }
+}

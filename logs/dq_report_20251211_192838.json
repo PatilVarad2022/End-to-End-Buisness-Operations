@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "total": 26,
+    "passed": 25,
+    "failed": 1,
+    "pass_rate": 0.9615384615384616
+  },
+  "tests": [
+    {
+      "test_name": "Schema Completeness",
+      "passed": true,
+      "message": "All required tables exist",
+      "details": [],
+      "timestamp": "2025-12-11T19:28:37.523796"
+    },
+    {
+      "test_name": "Required Columns - dim_customer",
+      "passed": true,
+      "message": "dim_customer: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:28:37.533196"
+    },
+    {
+      "test_name": "Required Columns - dim_product",
+      "passed": true,
+      "message": "dim_product: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:28:37.537177"
+    },
+    {
+      "test_name": "Required Columns - fact_transactions",
+      "passed": true,
+      "message": "fact_transactions: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:28:37.545128"
+    },
+    {
+      "test_name": "Required Columns - fact_kpis_daily",
+      "passed": true,
+      "message": "fact_kpis_daily: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:28:37.552830"
+    },
+    {
+      "test_name": "Date Format - dim_date.date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:28:37.559367"
+    },
+    {
+      "test_name": "Date Format - dim_customer.signup_date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:28:37.566973"
+    },
+    {
+      "test_name": "Date Format - fact_transactions.order_date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:28:37.576972"
+    },
+    {
+      "test_name": "Date Format - fact_kpis_daily.date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:28:37.583712"
+    },
+    {
+      "test_name": "No Nulls - dim_customer.customer_id",
+      "passed": true,
+      "message": "dim_customer.customer_id: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.591227"
+    },
+    {
+      "test_name": "No Nulls - dim_product.product_id",
+      "passed": true,
+      "message": "dim_product.product_id: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.596079"
+    },
+    {
+      "test_name": "No Nulls - fact_transactions.order_id",
+      "passed": true,
+      "message": "fact_transactions.order_id: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.683822"
+    },
+    {
+      "test_name": "No Nulls - fact_transactions.customer_id",
+      "passed": true,
+      "message": "fact_transactions.customer_id: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.687144"
+    },
+    {
+      "test_name": "No Nulls - fact_transactions.product_id",
+      "passed": true,
+      "message": "fact_transactions.product_id: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.690160"
+    },
+    {
+      "test_name": "No Nulls - fact_kpis_daily.date",
+      "passed": true,
+      "message": "fact_kpis_daily.date: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.712662"
+    },
+    {
+      "test_name": "No Nulls - fact_kpis_daily.kpi_name",
+      "passed": true,
+      "message": "fact_kpis_daily.kpi_name: No nulls",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.716387"
+    },
+    {
+      "test_name": "Referential Integrity - customer_id",
+      "passed": true,
+      "message": "All customer_ids valid",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:37.792183"
+    },
+    {
+      "test_name": "Referential Integrity - product_id",
+      "passed": false,
+      "message": "13609 orphaned product_ids",
+      "details": 13609,
+      "timestamp": "2025-12-11T19:28:37.895808"
+    },
+    {
+      "test_name": "Date Continuity - Daily KPIs",
+      "passed": true,
+      "message": "No gaps in daily series",
+      "details": null,
+      "timestamp": "2025-12-11T19:28:37.939180"
+    },
+    {
+      "test_name": "KPI Reconciliation - Revenue",
+      "passed": true,
+      "message": "Revenue reconciles (max diff: 0.00)",
+      "details": 1.1641532182693481e-10,
+      "timestamp": "2025-12-11T19:28:38.035990"
+    },
+    {
+      "test_name": "Revenue Calculation Logic",
+      "passed": true,
+      "message": "Revenue calculations correct (max diff: 0.00)",
+      "details": 3.637978807091713e-12,
+      "timestamp": "2025-12-11T19:28:38.151737"
+    },
+    {
+      "test_name": "Margin Calculation Logic",
+      "passed": true,
+      "message": "Margin calculations correct (max diff: 0.00)",
+      "details": 1.4551915228366852e-11,
+      "timestamp": "2025-12-11T19:28:38.154222"
+    },
+    {
+      "test_name": "Non-Negative Values - quantity",
+      "passed": true,
+      "message": "quantity: All non-negative",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:38.229895"
+    },
+    {
+      "test_name": "Non-Negative Values - revenue_gross",
+      "passed": true,
+      "message": "revenue_gross: All non-negative",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:38.230703"
+    },
+    {
+      "test_name": "Non-Negative Values - revenue_net",
+      "passed": true,
+      "message": "revenue_net: All non-negative",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:38.231553"
+    },
+    {
+      "test_name": "Non-Negative Values - cogs",
+      "passed": true,
+      "message": "cogs: All non-negative",
+      "details": 0,
+      "timestamp": "2025-12-11T19:28:38.232016"
+    }
+  ]
+}

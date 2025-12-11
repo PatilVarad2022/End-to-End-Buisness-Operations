@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "total": 26,
+    "passed": 25,
+    "failed": 1,
+    "pass_rate": 0.9615384615384616
+  },
+  "tests": [
+    {
+      "test_name": "Schema Completeness",
+      "passed": true,
+      "message": "All required tables exist",
+      "details": [],
+      "timestamp": "2025-12-11T19:27:57.469003"
+    },
+    {
+      "test_name": "Required Columns - dim_customer",
+      "passed": true,
+      "message": "dim_customer: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:27:57.479059"
+    },
+    {
+      "test_name": "Required Columns - dim_product",
+      "passed": true,
+      "message": "dim_product: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:27:57.482161"
+    },
+    {
+      "test_name": "Required Columns - fact_transactions",
+      "passed": true,
+      "message": "fact_transactions: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:27:57.494480"
+    },
+    {
+      "test_name": "Required Columns - fact_kpis_daily",
+      "passed": true,
+      "message": "fact_kpis_daily: All required columns present",
+      "details": [],
+      "timestamp": "2025-12-11T19:27:57.503416"
+    },
+    {
+      "test_name": "Date Format - dim_date.date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:27:57.510535"
+    },
+    {
+      "test_name": "Date Format - dim_customer.signup_date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:27:57.515334"
+    },
+    {
+      "test_name": "Date Format - fact_transactions.order_date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:27:57.527357"
+    },
+    {
+      "test_name": "Date Format - fact_kpis_daily.date",
+      "passed": true,
+      "message": "Valid ISO date format",
+      "details": null,
+      "timestamp": "2025-12-11T19:27:57.542667"
+    },
+    {
+      "test_name": "No Nulls - dim_customer.customer_id",
+      "passed": 

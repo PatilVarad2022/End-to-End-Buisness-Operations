@@ -56,9 +56,11 @@ def create_bi_exports(config_path='config.yaml', output_format='both'):
     
     print("[4/7] Creating fact_transactions.csv (from fact_orders)...")
     fact_orders = pd.read_csv(os.path.join(processed_path, 'fact_orders.csv'))
+    
+    # Use actual columns from fact_orders
     fact_transactions = fact_orders[['order_id', 'order_date', 'customer_id', 'product_id', 
-                                      'region_id', 'units', 'gross_sales', 'discount_amount', 
-                                      'net_sales', 'total_cost', 'profit', 'order_status', 'channel']].copy()
+                                      'region_id', 'units', 'gross_sales', 
+                                      'net_sales', 'total_cost', 'profit', 'order_status']].copy()
     fact_transactions['order_date'] = pd.to_datetime(fact_transactions['order_date']).dt.strftime('%Y-%m-%d')
     fact_transactions = fact_transactions.rename(columns={
         'units': 'quantity',
@@ -67,15 +69,19 @@ def create_bi_exports(config_path='config.yaml', output_format='both'):
         'total_cost': 'cogs',
         'profit': 'gross_margin'
     })
+    # Add calculated discount_amount
+    fact_transactions['discount_amount'] = fact_transactions['revenue_gross'] - fact_transactions['revenue_net']
     save_table(fact_transactions, bi_path, 'fact_transactions', output_format)
     
     print("[5/7] Creating fact_delivery.csv...")
     fact_delivery = pd.read_parquet(os.path.join(processed_path, 'fact_delivery.parquet'))
     fact_delivery_bi = fact_delivery[['order_id', 'dispatch_date', 'delivery_date', 
-                                       'carrier', 'delivery_cost', 'delivery_days', 
+                                       'carrier', 'delivery_cost', 'delivery_time_days', 
                                        'sla_met', 'return_flag']].copy()
     fact_delivery_bi['dispatch_date'] = pd.to_datetime(fact_delivery_bi['dispatch_date']).dt.strftime('%Y-%m-%d')
     fact_delivery_bi['delivery_date'] = pd.to_datetime(fact_delivery_bi['delivery_date']).dt.strftime('%Y-%m-%d')
+    # Rename for BI consistency
+    fact_delivery_bi = fact_delivery_bi.rename(columns={'delivery_time_days': 'delivery_days'})
     save_table(fact_delivery_bi, bi_path, 'fact_delivery', output_format)
     
     # ============================================================

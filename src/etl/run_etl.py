@@ -92,8 +92,8 @@ def run_full_pipeline(start_date=None, end_date=None, output_dir='data/processed
         print("\n[STEP 2/5] Running ETL Pipeline...")
         step_start = datetime.now()
         
-        from src.etl.main_etl import run_all_etl
-        run_all_etl()
+        from src.etl.main_etl import main as run_etl_main
+        run_etl_main()
         
         execution_log['steps'].append({
             'step': 'etl_processing',

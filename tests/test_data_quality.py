@@ -45,10 +45,19 @@ class DataQualityValidator:
     
     def add_test_result(self, test_name, passed, message, details=None):
         """Add test result"""
+        # Convert details to native Python types for JSON serialization
+        if details is not None:
+            if hasattr(details, 'item'):  # numpy types
+                details = details.item()
+            elif isinstance(details, (list, tuple)):
+                details = list(details)
+            elif not isinstance(details, (str, int, float)):
+                details = str(details)
+        
         self.test_results.append({
             'test_name': test_name,
-            'passed': passed,
-            'message': message,
+            'passed': bool(passed),  # Ensure boolean
+            'message': str(message),
             'details': details,
             'timestamp': datetime.now().isoformat()
         })

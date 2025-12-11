@@ -1,0 +1,21 @@
+{
+  "start_time": "2025-12-11T19:18:28.958435",
+  "parameters": {
+    "start_date": null,
+    "end_date": null,
+    "output_dir": "data/processed",
+    "fast_mode": true,
+    "seed": 42,
+    "skip_validation": false
+  },
+  "steps": [
+    {
+      "step": "data_generation",
+      "status": "success",
+      "duration_seconds": 2.673463
+    }
+  ],
+  "end_time": "2025-12-11T19:18:32.103782",
+  "status": "failed",
+  "error": "cannot import name 'run_all_etl' from 'src.etl.main_etl' (D:\\End-to-End Buisness Operations\\src\\etl\\..\\..\\src\\etl\\main_etl.py)"
+}

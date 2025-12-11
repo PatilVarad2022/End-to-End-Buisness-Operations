@@ -1,0 +1,6 @@
+scenario_id,scenario_name,description,revenue_growth,conversion_improvement,marketing_efficiency,cost_reduction,churn_reduction,created_at,created_by
+S001,Aggressive Growth,20% revenue growth with 10% marketing spend increase,0.2,0.15,0.1,0.0,0.0,2025-12-11T19:23:29.257235,system
+S002,Cost Optimization,10% cost reduction with stable revenue,0.0,0.05,-0.1,-0.1,0.0,2025-12-11T19:23:29.257242,system
+S003,Customer Retention Focus,"Reduce churn by 25%, improve repeat purchases",0.1,0.1,0.0,0.0,-0.25,2025-12-11T19:23:29.257244,system
+S004,Balanced Growth,Moderate growth across all metrics,0.1,0.1,0.05,-0.05,-0.1,2025-12-11T19:23:29.257245,system
+S005,Conservative,"Minimal changes, focus on stability",0.05,0.03,0.0,-0.02,-0.05,2025-12-11T19:23:29.257246,system
